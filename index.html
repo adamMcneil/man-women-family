@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Man, Woman, and Family — A Conference Hosted by Covenant Family Church (OPC)</title>
+<meta name="description" content="A two-day conference on Man, Woman, and Family, September 25-26, 2026 in O'Fallon, Missouri. Hosted by Covenant Family Church (OPC). Speakers: Peter Bringe, Brian De Jong, and Mike Myers.">
+
+<style>
+  :root {
+    --ink: #1d2226;
+    --ink-soft: #3b4047;
+    --muted: #6b7178;
+    --paper: #fbf8f3;
+    --paper-warm: #f3ece0;
+    --rule: #d9cfbf;
+    --accent: #5a6b3b;
+    --accent-dark: #3f4c28;
+    --shadow: 0 1px 2px rgba(20, 25, 30, 0.05), 0 8px 24px rgba(20, 25, 30, 0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 0.5em;
+  }
+
+  p { margin: 0 0 1em; }
+
+  a { color: var(--accent-dark); }
+  a:hover { color: var(--ink); }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ---------- Navigation ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(251, 248, 243, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .nav-brand {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--accent-dark); }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background: var(--ink);
+  }
+  .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+  }
+  .hero-cta {
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+  .hero-cta p {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 720px;
+    margin: 0 auto 1.25rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.05s;
+  }
+  .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+  .btn:active { transform: translateY(1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn-outline:hover { background: var(--ink); color: #fff; }
+
+  /* ---------- Section base ---------- */
+  section { padding: 4rem 0; }
+  section + section { border-top: 1px solid var(--rule); }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  h2 { font-size: 2rem; line-height: 1.2; }
+  .lede {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+  }
+
+  /* ---------- Event details ---------- */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .detail {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  .detail-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .detail-value {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .detail-sub {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+
+  /* ---------- Speakers ---------- */
+  #speakers { background: var(--paper-warm); }
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  .speaker {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  .speaker-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 25%;
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--rule);
+  }
+  .speaker-body { padding: 1.5rem; flex: 1; }
+  .speaker-name {
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+  .speaker-church {
+    font-size: 0.9rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .speaker-bio {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  /* ---------- Tickets ---------- */
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .ticket {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.75rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .ticket-featured {
+    border-color: var(--accent);
+    border-width: 2px;
+  }
+  .ticket-badge {
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+  }
+  .ticket-tier {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  .ticket-price {
+    font-family: Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .ticket-price-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+  .ticket-detail {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .ticket-note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .ticket-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* ---------- Contact ---------- */
+  #contact { background: var(--paper-warm); }
+  .contact-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-email {
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .contact-email:hover { color: var(--ink); text-decoration: underline; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink);
+    color: #c8cdd2;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a { color: #e8e2d4; }
+
+  /* ---------- Mobile tweaks ---------- */
+  @media (max-width: 640px) {
+    h2 { font-size: 1.6rem; }
+    section { padding: 3rem 0; }
+    .hero-cta { padding: 1.5rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">Man, Woman, and Family</a>
+    <div class="nav-links">
+      <a href="#details">Details</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<a id="top"></a>
+<header class="hero">
+  <img class="hero-image" src="IMG_1197.JPG" alt="Man, Woman, and Family — September 25-26 in O'Fallon, Missouri. A conference hosted by Covenant Family Church (OPC).">
+  <div class="hero-cta">
+    <p>Join us for two days of biblical teaching on what it means to be man, woman, and family in our generation.</p>
+    <a class="btn" href="https://events.ticketleap.com/tickets/covenant-family/man-women-and-family" target="_blank" rel="noreferrer">Register Now</a>
+  </div>
+</header>
+
+<section id="details">
+  <div class="container">
+    <div class="eyebrow">The Conference</div>
+    <h2>September 25-26, 2026 &middot; O'Fallon, Missouri</h2>
+    <p class="lede">A two-day conference exploring God's design for man, woman, and the family, hosted by Covenant Family Church (Orthodox Presbyterian Church) at Liberty Church in O'Fallon.</p>
+
+    <div class="details-grid">
+      <div class="detail">
+        <div class="detail-label">Dates</div>
+        <div class="detail-value">Sep 25-26, 2026</div>
+        <div class="detail-sub">Friday &amp; Saturday</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Times</div>
+        <div class="detail-value">Fri 6:30 PM &ndash; Sat 3:00 PM</div>
+        <div class="detail-sub">Central Daylight Time</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Venue</div>
+        <div class="detail-value">Liberty Church</div>
+        <div class="detail-sub">O'Fallon, Missouri</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">Host</div>
+        <div class="detail-value">Covenant Family Church</div>
+        <div class="detail-sub">Orthodox Presbyterian Church</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="speakers">
+  <div class="container">
+    <div class="eyebrow">Speakers</div>
+    <h2>Three Pastors of the OPC</h2>
+    <p class="lede">Hear from three faithful ministers of the Orthodox Presbyterian Church as they unfold the Scriptures on manhood, womanhood, and the home.</p>
+
+    <div class="speakers">
+
+      <article class="speaker">
+        <img class="speaker-photo" src="peter-bringe.jpeg" alt="Rev. Peter Bringe">
+        <div class="speaker-body">
+          <h3 class="speaker-name">Rev. Peter Bringe</h3>
+          <div class="speaker-church">Covenant Family OPC &middot; Wentzville, MO</div>
+          <p class="speaker-bio">Rev. Peter Bringe has lived most of his life in St. Charles County and is happy to call it home. He has a long history with Covenant Family Church, having first become a member with his family at age twelve. He holds a BA in Bible and Theology from Whitefield College and an MDiv from Covenant Theological Seminary. After serving as a pastoral intern and deacon, he was called as pastor and ordained on October 9, 2018. Peter and his wife Melody have been blessed with seven children. On the side, he enjoys folk music, history, and the outdoors.</p>
+        </div>
+      </article>
+
+      <article class="speaker">
+        <img class="speaker-photo" src="dejong.jpeg" alt="Rev. Brian De Jong">
+        <div class="speaker-body">
+          <h3 class="speaker-name">Rev. Brian De Jong</h3>
+          <div class="speaker-church">Grace OPC &middot; Sheboygan, WI</div>
+          <p class="speaker-bio">Born in Bozeman, Montana in 1963, Pastor De Jong earned a BA in Cinema and Photography from Southern Illinois University-Carbondale before receiving his MDiv from Reformed Theological Seminary in Jackson. Ordained in 1993 in the PCA, he ministered to international students at the University of Florida, planted a church in Marion, Illinois, and served Covenant OPC in Brighton, Michigan. Since 2005 he has been pastor of Grace OPC in Sheboygan, where he also serves as chairman of the Candidates and Credentials Committee and as Archivist and Historian of the Presbytery of Wisconsin and Minnesota. He and DeLou have six children and eight grandchildren.</p>
+        </div>
+      </article>
+
+      <article class="speaker">
+        <img class="speaker-photo" src="meyer.jpeg" alt="Rev. Mike Myers">
+        <div class="speaker-body">
+          <h3 class="speaker-name">Rev. Mike Myers</h3>
+          <div class="speaker-church">Heritage OPC &middot; Royston, GA</div>
+          <p class="speaker-bio">After graduating from Greenville Presbyterian Theological Seminary in May 2013, Mike Myers was called to be the organizing pastor of Heritage Presbyterian Church (OPC). He was ordained on December 6, 2013. When the church particularized in September 2017, Heritage called Pastor Myers to stay as the minister. Mike and his wife Katy have eight children.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="tickets">
+  <div class="container">
+    <div class="eyebrow">Registration</div>
+    <h2>Tickets</h2>
+    <p class="lede">Whole families are welcome. Save $10 per adult by registering before August 26, 2026.</p>
+
+    <div class="tickets">
+
+      <div class="ticket ticket-featured">
+        <div class="ticket-badge">Early Bird</div>
+        <div class="ticket-tier">Ages 15 &amp; Up</div>
+        <div class="ticket-price">$20</div>
+        <div class="ticket-price-sub">per person</div>
+        <div class="ticket-detail">Through August 26, 2026</div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-tier">Ages 15 &amp; Up</div>
+        <div class="ticket-price">$30</div>
+        <div class="ticket-price-sub">per person</div>
+        <div class="ticket-detail">After August 26, 2026</div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-tier">Youth</div>
+        <div class="ticket-price">$5</div>
+        <div class="ticket-price-sub">per child</div>
+        <div class="ticket-detail">Ages 4&ndash;14</div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-tier">Little Ones</div>
+        <div class="ticket-price">Free</div>
+        <div class="ticket-price-sub">&nbsp;</div>
+        <div class="ticket-detail">Under 4 years old</div>
+      </div>
+
+    </div>
+
+    <p class="ticket-note">A 3% online transaction fee plus a small service fee will be applied at checkout.</p>
+
+    <div class="ticket-cta">
+      <a class="btn" href="https://events.ticketleap.com/tickets/covenant-family/man-women-and-family" target="_blank" rel="noreferrer">Buy Tickets</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow">Questions?</div>
+    <h2>Get in Touch</h2>
+    <p class="lede">We'd love to help you plan your visit. Reach out with any questions about the conference, registration, or lodging.</p>
+
+    <div class="contact-card">
+      <p style="margin-bottom: 0.75rem; color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Email the Event Organizer</p>
+      <a class="contact-email" href="mailto:conferences@covenantfamilychurch.net">conferences@covenantfamilychurch.net</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p style="margin-bottom: 0.5rem;"><strong>Man, Woman, and Family</strong> &middot; September 25-26, 2026</p>
+    <p style="margin: 0; color: #9aa0a6;">Hosted by Covenant Family Church (OPC) &middot; O'Fallon, Missouri</p>
+  </div>
+</footer>
+
+</body>
+</html>
