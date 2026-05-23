@@ -269,6 +269,11 @@
     }
     .speaker.flip .speaker-image-col { order: 0; }
     .speaker.flip .speaker-text-col { order: 1; }
+    .speaker .speaker-image-col {
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
   }
 
   .speaker-image-col {
@@ -482,6 +487,80 @@
     color: var(--ink);
     margin-bottom: 0.75rem;
   }
+
+  /* ---------- Mobile (<=600px) ---------- */
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+
+    .container, .container-narrow { padding: 0 1.25rem; }
+    .topbar-inner { padding: 0 1.25rem; }
+    .topbar { padding: 1rem 0; }
+    .topbar-brand { font-size: 1.2rem; }
+
+    .masthead { padding: 3rem 1.25rem 2rem; }
+    .issue-line { font-size: 0.85rem; margin-bottom: 1rem; }
+    .masthead-subtitle { font-size: 1.15rem; margin-bottom: 2rem; }
+    .masthead-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .masthead-meta .dot { display: none; }
+
+    .plate { margin: 2.5rem auto; padding: 0 1.25rem; }
+    .plate-inner { padding: 0.6rem; }
+    .plate-caption { font-size: 0.85rem; margin-top: 0.85rem; }
+
+    .lead { padding: 0 0 2.5rem; }
+    .lead-text { font-size: 1.2rem; line-height: 1.55; }
+    .lead-text::first-letter { font-size: 3.5em; padding-top: 0.15rem; }
+
+    hr.ornament { margin: 2.25rem auto; font-size: 1.2rem; }
+
+    section.editorial { padding: 3rem 0; }
+    .section-head { margin-bottom: 2.25rem; }
+    .section-head .section-deck { font-size: 1.05rem; }
+
+    .speaker, .speaker.flip {
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .speaker-name { font-size: 1.9rem; }
+    .speaker-church { font-size: 1.05rem; margin-bottom: 1rem; }
+    .speaker-num-label { font-size: 1rem; }
+
+    .details-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .detail-value { font-size: 1.2rem; }
+
+    .ticket-row {
+      padding: 1.35rem 0;
+      gap: 1rem;
+    }
+    .ticket-tier-name { font-size: 1.35rem; }
+    .ticket-tier-name em {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.1rem;
+      font-size: 0.9em;
+    }
+    .ticket-tier-desc { font-size: 0.88rem; }
+    .ticket-row-price { font-size: 1.8rem; }
+    .ticket-fine { font-size: 0.88rem; margin-top: 2rem; }
+
+    .contact-block { padding: 3rem 1.25rem; }
+    .contact-block h2 { font-size: 2rem; }
+    .contact-email-link {
+      font-size: 1rem;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+      padding-bottom: 0.2rem;
+      margin-top: 1.25rem;
+    }
+
+    footer { padding: 2rem 1.25rem; }
+    footer .footer-title { font-size: 1.15rem; }
+    footer p { font-size: 0.85rem; }
+  }
 </style>
 </head>
 <body>
@@ -535,23 +614,23 @@
 
     <a class="speaker" href="https://covenantfamilychurch.net/" target="_blank" rel="noreferrer">
       <div class="speaker-image-col">
-        <img src="peter-bringe.jpeg" alt="Rev. Peter Bringe">
+        <img src="peter-bringe.jpeg" alt="Peter Bringe">
       </div>
       <div class="speaker-text-col">
         <span class="speaker-num-label">No. I</span>
-        <h3 class="speaker-name">Rev. Peter Bringe</h3>
+        <h3 class="speaker-name">Peter Bringe</h3>
         <div class="speaker-church">Covenant Family OPC &middot; Wentzville, Missouri<span class="church-arrow">&#8599;</span></div>
-        <p class="speaker-bio">Rev. Peter Bringe has lived most of his life here in St. Charles County and is happy to call it home. He has a long history with Covenant Family Church, having first become a member with his family when he was twelve. Peter holds a BA in Bible and Theology from Whitefield College and an MDiv from Covenant Theological Seminary. After serving as a pastoral intern and deacon, he was called as pastor and ordained on October 9, 2018. Peter and his wife Melody have been blessed with seven children. On the side, he enjoys folk music, history, and the outdoors.</p>
+        <p class="speaker-bio">Peter Bringe has lived most of his life here in St. Charles County and is happy to call it home. He has a long history with Covenant Family Church, having first become a member with his family when he was twelve. Peter holds a BA in Bible and Theology from Whitefield College and an MDiv from Covenant Theological Seminary. After serving as a pastoral intern and deacon, he was called as pastor and ordained on October 9, 2018. Peter and his wife Melody have been blessed with seven children. On the side, he enjoys folk music, history, and the outdoors.</p>
       </div>
     </a>
 
     <a class="speaker flip" href="https://www.graceopcsheboygan.com/" target="_blank" rel="noreferrer">
       <div class="speaker-image-col">
-        <img src="dejong.webp" alt="Rev. Brian De Jong">
+        <img src="dejong.webp" alt="Brian De Jong">
       </div>
       <div class="speaker-text-col">
         <span class="speaker-num-label">No. II</span>
-        <h3 class="speaker-name">Rev. Brian De Jong</h3>
+        <h3 class="speaker-name">Brian De Jong</h3>
         <div class="speaker-church">Grace OPC &middot; Sheboygan, Wisconsin<span class="church-arrow">&#8599;</span></div>
         <p class="speaker-bio">Born in Bozeman, Montana in 1963, Pastor De Jong grew up across Michigan, Iowa, California, New Jersey, and Illinois. He earned a BA in Cinema and Photography from Southern Illinois University-Carbondale and an MDiv from Reformed Theological Seminary in Jackson. Ordained in 1993 (PCA) for campus ministry at the University of Florida, he later planted a church in Marion, Illinois, and pastored Covenant OPC in Brighton, Michigan. Since 2005 he has served as pastor of Grace OPC in Sheboygan, and as chairman of the Candidates and Credentials Committee and Historian of the Presbytery of Wisconsin and Minnesota. He and DeLou have six children and eight grandchildren.</p>
       </div>
@@ -559,11 +638,11 @@
 
     <a class="speaker" href="https://heritageopc.org/" target="_blank" rel="noreferrer">
       <div class="speaker-image-col">
-        <img src="meyer.jpeg" alt="Rev. Mike Myers">
+        <img src="meyer.jpeg" alt="Mike Myers">
       </div>
       <div class="speaker-text-col">
         <span class="speaker-num-label">No. III</span>
-        <h3 class="speaker-name">Rev. Mike Myers</h3>
+        <h3 class="speaker-name">Mike Myers</h3>
         <div class="speaker-church">Heritage OPC &middot; Royston, Georgia<span class="church-arrow">&#8599;</span></div>
         <p class="speaker-bio">After graduating from Greenville Presbyterian Theological Seminary in May 2013, Mike Myers was called to be the organizing pastor of Heritage Presbyterian Church (OPC). He was ordained on December 6, 2013. When the church particularized in September 2017, Heritage called Pastor Myers to stay on as the minister. Mike and his wife Katy have eight children.</p>
       </div>
