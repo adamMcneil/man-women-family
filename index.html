@@ -450,6 +450,93 @@
   }
   .btn:hover { background: var(--sepia); border-color: var(--sepia); }
 
+  /* ---------- Schedule ---------- */
+  .schedule { background: var(--paper); }
+  .schedule-day { margin-bottom: 3.5rem; }
+  .schedule-day:last-of-type { margin-bottom: 0; }
+  .schedule-day-head {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .schedule-day-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--sepia);
+    margin-bottom: 0.4rem;
+  }
+  .schedule-day-title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+  }
+  .schedule-day-title em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 400;
+  }
+  .schedule-day-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    align-items: baseline;
+    padding: 1.25rem 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .schedule-row:last-child { border-bottom: 0; }
+  .schedule-time {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sepia);
+    line-height: 1.4;
+  }
+  .schedule-talk {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--ink);
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  .schedule-talk.schedule-interlude { color: var(--sepia); }
+  .schedule-speaker {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .schedule-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-left: 0.35rem;
+    font-weight: 400;
+  }
+  .schedule-foot {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 3rem;
+  }
+
   /* ---------- Contact ---------- */
   .contact-block {
     text-align: center;
@@ -532,6 +619,21 @@
     .details-grid { grid-template-columns: 1fr; gap: 2rem; }
     .detail-value { font-size: 1.2rem; }
 
+    .schedule-row {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      padding: 1.1rem 0;
+    }
+    .schedule-time { font-size: 0.7rem; }
+    .schedule-talk { font-size: 1.2rem; }
+    .schedule-speaker { font-size: 1rem; }
+    .schedule-day-head {
+      margin-bottom: 1rem;
+      padding-bottom: 1.25rem;
+    }
+    .schedule-day { margin-bottom: 2.5rem; }
+    .schedule-foot { margin-top: 2rem; }
+
     .ticket-row {
       padding: 1.35rem 0;
       gap: 1rem;
@@ -570,6 +672,7 @@
     <a class="topbar-brand" href="#top">Man, Woman, &amp; Family</a>
     <nav class="topbar-nav">
       <a href="#speakers">Speakers</a>
+      <a href="#schedule">Schedule</a>
       <a href="#details">Details</a>
       <a href="#tickets">Tickets</a>
       <a href="#contact">Contact</a>
@@ -579,7 +682,7 @@
 
 <a id="top"></a>
 <section class="masthead">
-  <div class="issue-line">— A Conference of the Orthodox Presbyterian Church —</div>
+  <div class="issue-line">— A Conference of Covenant Family Church —</div>
   <h1 class="masthead-title">Man, Woman, <em>&amp;</em> Family</h1>
   <p class="masthead-subtitle">A weekend in O'Fallon, Missouri, given to the Bible's vision for manhood, womanhood, and the home.</p>
   <div class="masthead-meta">
@@ -597,10 +700,6 @@
     <p class="plate-caption">Plate I &mdash; <em>"A Conference Hosted by Covenant Family Church (OPC)"</em></p>
   </div>
 </div>
-
-<section class="lead container-narrow">
-  <p class="lead-text">Over two days this autumn, three pastors of the Orthodox Presbyterian Church will gather with the saints in O'Fallon to consider, from the Scriptures, what it means to be man, woman, and family in this generation. Friday evening through Saturday afternoon, with sessions for parents, young people, and children.</p>
-</section>
 
 <hr class="ornament">
 
@@ -651,6 +750,104 @@
   </div>
 </section>
 
+<section id="schedule" class="editorial schedule">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="smallcaps">The Program</div>
+      <h2>Order of the <em>weekend</em>.</h2>
+      <p class="section-deck">Two days of teaching, fellowship, and a meal together.</p>
+    </div>
+
+    <div class="schedule-day">
+      <div class="schedule-day-head">
+        <div class="schedule-day-label">Day One</div>
+        <h3 class="schedule-day-title">Friday <em>Evening</em></h3>
+        <div class="schedule-day-date">September 25, 2026</div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">6:30 &ndash; 6:45 PM</div>
+        <div>
+          <div class="schedule-talk">Introduction</div>
+          <div class="schedule-speaker">Peter Bringe</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">6:45 &ndash; 7:30 PM</div>
+        <div>
+          <div class="schedule-talk">The Goodness of Manhood, Womanhood, and Family</div>
+          <div class="schedule-speaker">Brian De Jong</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">7:30 &ndash; 9:00 PM</div>
+        <div>
+          <div class="schedule-talk schedule-interlude">Fellowship</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-day">
+      <div class="schedule-day-head">
+        <div class="schedule-day-label">Day Two</div>
+        <h3 class="schedule-day-title"><em>Saturday</em></h3>
+        <div class="schedule-day-date">September 26, 2026</div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">9:00 &ndash; 9:45 AM</div>
+        <div>
+          <div class="schedule-talk">Becoming Mature Men in Christ</div>
+          <div class="schedule-speaker">Mike Myers</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">10:00 &ndash; 10:45 AM</div>
+        <div>
+          <div class="schedule-talk">Becoming Mature Women in Christ</div>
+          <div class="schedule-speaker">Mike Myers</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">11:00 &ndash; 11:45 AM</div>
+        <div>
+          <div class="schedule-talk">The Christian Family</div>
+          <div class="schedule-speaker">Brian De Jong</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">12:00 &ndash; 1:00 PM</div>
+        <div>
+          <div class="schedule-talk schedule-interlude">Lunch<span class="schedule-note">(provided)</span></div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">1:15 &ndash; 2:00 PM</div>
+        <div>
+          <div class="schedule-talk">Q&amp;A Panel</div>
+          <div class="schedule-speaker">All Speakers</div>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="schedule-time">2:15 &ndash; 3:00 PM</div>
+        <div>
+          <div class="schedule-talk">Men, Women, Family, and Courage</div>
+          <div class="schedule-speaker">Peter Bringe</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="schedule-foot">Doors open Saturday morning at 8:30.</p>
+  </div>
+</section>
+
 <section id="details" class="editorial details">
   <div class="container">
     <div class="section-head">
@@ -665,8 +862,8 @@
       </div>
       <div>
         <span class="detail-label">Hours</span>
-        <div class="detail-value">Fri 6:30 PM<br>Sat 3:00 PM</div>
-        <div class="detail-sub">Central Daylight Time</div>
+        <div class="detail-value">Fri 6:30 PM<br>Sat 8:30 AM</div>
+        <div class="detail-sub">Doors open &middot; CDT</div>
       </div>
       <div>
         <span class="detail-label">Venue</span>
@@ -741,7 +938,7 @@
 
     </div>
 
-    <p class="ticket-fine">A 3% online transaction fee and a small service fee will be applied at checkout.</p>
+    <p class="ticket-fine">All fees are covered by the conference &mdash; the price you see is the price you pay.</p>
 
     <div class="ticket-cta-row">
       <a class="btn" href="https://events.ticketleap.com/tickets/covenant-family/man-women-and-family" target="_blank" rel="noreferrer">Buy Tickets</a>
