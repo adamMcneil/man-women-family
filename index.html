@@ -351,13 +351,13 @@
     border-bottom: 1px solid var(--rule);
   }
   .details-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
     text-align: center;
   }
-  @media (max-width: 720px) {
-    .details-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem 1rem; }
+  .details-grid > div {
+    max-width: 280px;
+    width: 100%;
   }
   .detail-label {
     display: block;
@@ -616,7 +616,6 @@
     .speaker-church { font-size: 1.05rem; margin-bottom: 1rem; }
     .speaker-num-label { font-size: 1rem; }
 
-    .details-grid { grid-template-columns: 1fr; gap: 2rem; }
     .detail-value { font-size: 1.2rem; }
 
     .schedule-row {
@@ -697,7 +696,6 @@
 <div class="plate">
   <div class="plate-inner">
     <img src="IMG_1199.JPG" alt="A field at sunset in the Missouri countryside, with the conference title overlaid">
-    <p class="plate-caption">Plate I &mdash; <em>"A Conference Hosted by Covenant Family Church (OPC)"</em></p>
   </div>
 </div>
 
@@ -719,7 +717,9 @@
         <span class="speaker-num-label">No. I</span>
         <h3 class="speaker-name">Peter Bringe</h3>
         <div class="speaker-church">Covenant Family OPC &middot; Wentzville, Missouri<span class="church-arrow">&#8599;</span></div>
-        <p class="speaker-bio">Peter Bringe has lived most of his life here in St. Charles County and is happy to call it home. He has a long history with Covenant Family Church, having first become a member with his family when he was twelve. Peter holds a BA in Bible and Theology from Whitefield College and an MDiv from Covenant Theological Seminary. After serving as a pastoral intern and deacon, he was called as pastor and ordained on October 9, 2018. Peter and his wife Melody have been blessed with seven children. On the side, he enjoys folk music, history, and the outdoors.</p>
+        <p class="speaker-bio">
+          Peter Bringe is the pastor of Covenant Family Church (Wentzville, MO), a congregation of the Orthodox Presbyterian Church. He first joined it in 2006 and has served as its pastor since 2018. Peter has a BA in Bible and Theology from Whitefield College and a MDiv from Covenant Theological Seminary. He also serves on the board of the Bahnsen Institute and teaches fife for a local fife and drum corps. Peter is married to Melody and they have been blessed thus far with seven children.
+        </p>
       </div>
     </a>
 
@@ -731,7 +731,9 @@
         <span class="speaker-num-label">No. II</span>
         <h3 class="speaker-name">Brian De Jong</h3>
         <div class="speaker-church">Grace OPC &middot; Sheboygan, Wisconsin<span class="church-arrow">&#8599;</span></div>
-        <p class="speaker-bio">Born in Bozeman, Montana in 1963, Pastor De Jong grew up across Michigan, Iowa, California, New Jersey, and Illinois. He earned a BA in Cinema and Photography from Southern Illinois University-Carbondale and an MDiv from Reformed Theological Seminary in Jackson. Ordained in 1993 (PCA) for campus ministry at the University of Florida, he later planted a church in Marion, Illinois, and pastored Covenant OPC in Brighton, Michigan. Since 2005 he has served as pastor of Grace OPC in Sheboygan, and as chairman of the Candidates and Credentials Committee and Historian of the Presbytery of Wisconsin and Minnesota. He and DeLou have six children and eight grandchildren.</p>
+        <p class="speaker-bio">
+          Born in Bozeman, Montana in 1963, Pastor De Jong grew up across Michigan, Iowa, California, New Jersey, and Illinois. He earned a BA in Cinema and Photography from Southern Illinois University-Carbondale and an MDiv from Reformed Theological Seminary in Jackson. Ordained in 1993 (PCA) for campus ministry at the University of Florida, he later planted a church in Marion, Illinois, and pastored Covenant OPC in Brighton, Michigan. Since 2005 he has served as pastor of Grace OPC in Sheboygan, and as chairman of the Candidates and Credentials Committee and Historian of the Presbytery of Wisconsin and Minnesota. He and DeLou have six children and eight grandchildren.
+        </p>
       </div>
     </a>
 
@@ -851,20 +853,9 @@
 <section id="details" class="editorial details">
   <div class="container">
     <div class="section-head">
-      <div class="smallcaps">The Particulars</div>
-      <h2>The <em>weekend</em> at a glance.</h2>
+      <h2>The <em>venue</em>.</h2>
     </div>
     <div class="details-grid">
-      <div>
-        <span class="detail-label">Dates</span>
-        <div class="detail-value">Sep 25 &ndash; 26, 2026</div>
-        <div class="detail-sub">Friday &amp; Saturday</div>
-      </div>
-      <div>
-        <span class="detail-label">Hours</span>
-        <div class="detail-value">Fri 6:30 PM<br>Sat 8:30 AM</div>
-        <div class="detail-sub">Doors open &middot; CDT</div>
-      </div>
       <div>
         <span class="detail-label">Venue</span>
         <div class="detail-value">Liberty Church</div>
@@ -872,11 +863,6 @@
           <a href="https://www.google.com/maps/search/?api=1&amp;query=709+Crestview+Dr+O%27Fallon+MO+63366" target="_blank" rel="noreferrer">709 Crestview Dr<br>O'Fallon, MO 63366</a><br>
           <a href="tel:+16362404412">(636) 240-4412</a>
         </div>
-      </div>
-      <div>
-        <span class="detail-label">Host</span>
-        <div class="detail-value">Covenant Family<br>Church (OPC)</div>
-        <div class="detail-sub">Orthodox Presbyterian</div>
       </div>
     </div>
   </div>
@@ -886,7 +872,7 @@
   <div class="container">
     <div class="section-head">
       <div class="smallcaps">Registration</div>
-      <h2>A <em>family</em> rate.</h2>
+      <h2>Conference <em>pricing</em>.</h2>
       <p class="section-deck">Save ten dollars per adult by registering before August 26.</p>
     </div>
 
@@ -938,7 +924,6 @@
 
     </div>
 
-    <p class="ticket-fine">All fees are covered by the conference &mdash; the price you see is the price you pay.</p>
 
     <div class="ticket-cta-row">
       <a class="btn" href="https://events.ticketleap.com/tickets/covenant-family/man-women-and-family" target="_blank" rel="noreferrer">Buy Tickets</a>
